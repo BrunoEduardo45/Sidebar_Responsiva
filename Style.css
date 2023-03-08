@@ -1,26 +1,44 @@
 *{
     box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
 }
 body {
     margin: 0;
     font-family: sans-serif ;
-    background-color: #121212;
-    color:#fff;
+    background-color: #f6f7fb;
+    color:#121212;
 }
 .border {
     border: 1px solid red;
 }
 .logo-img{
-    width: 40px;
-    min-height: 40px;
+    width: 60px;
+    min-height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    transition: transform 0.4s;
     cursor: pointer;
-    margin-left: 10px;
+    margin-bottom: 15px;
+    border: 5px solid #0f9aed;
 }
 .logo-img:hover{
     transform: scale(1.2);
+}
+.sidebar-header > p{
+    margin: 0;
+    font-size: 22px;
+}
+.sidebar-header > span{
+    margin-top: 2px;
+    font-size: 12px;
+    color:#909090;
+}
+.sidebar-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
 }
 .sidebar {
     position: fixed;
@@ -30,46 +48,47 @@ body {
     align-items: flex-start;
     width: 240px;
     height: 100%;
-    padding: 40px 30px 30px 30px;
-    border-right: 1px solid #2f3336;
-    transition: all 0.3s ease;
+    border-right: 1px solid #d4d4d4;
+    background-color: #fff;
 }
-.sidebar-header{
+.sidebar hr{
     width: 100%;
-    margin-bottom: 15px;
+    border: 2px solid #f0f0f0;
+    margin:0;
 }
 .sidebar button {
     height: 60px;
     background-color: transparent;
     border: 0;
     font-family: inherit;
-    color: inherit;
+    color: #909090;
     cursor: pointer;
     text-align: left;
     padding: 0;
-    transition: all 0.3s ease;
 }
 .sidebar button > span {
     display:inline-flex;
+    width: 100%;
+    padding: 0;
     align-items: center;
     gap:12px;
-    height: 48px;
+    height: 60px;
     padding: 0 16px 0 12px;
-    border-radius: 24px;
     line-height: 1;
-    transition: all 0.3s;
 }
 .sidebar button:hover > span {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(000, 000, 000, 0.08);
+    color: #121212;
+    border-left: 5px solid #0f9aed;
+    transition: all 0.1s ease-in-out;
 }
 .sidebar button > i {
     position: relative;
     font-size: 28px;
-    transition: all 0.3s;
 }
 .sidebar button > span {
     font-size: 16px;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease-in-out;
 }
 .sidebar > nav {
     flex: 1 1 auto;
@@ -81,33 +100,37 @@ body {
     position: relative;
     margin-left: 260px;
     margin-right: 20px;
-    transition: all 0.3s ease;
     overflow: hidden;
+    font-size: 16px;
+    text-align: justify;
 }
-
 .button-mobile{
+    z-index: 99;
+    background-color: #ffffff;
+    border-bottom: 1px solid #c6c6c6;
     display: none;
-    align-self: flex-start;
+    justify-content: center;
     align-items: center;
-    margin: 16px;
-    background: transparent;
-    color: #fff;
+    position: fixed;
+    color: #000;
     border: 0;
+    cursor: pointer;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
 }
-
 .button-mobile span {
     font-size: 22px;
     margin-left: 8px;
 }
-
 .menu-mobile{
     display: none;
 }
-
 .menu-mobile-active{
     width: 100vw;
     height: 100vh;
-    background-color: #000;
+    background-color: #ffffff;
     z-index: 99;
     position: fixed;
     top: 0;
@@ -118,45 +141,55 @@ body {
     justify-content: center;
     overflow: hidden;
 }
-
 .menu-mobile-active button{
     background-color: transparent;
     border: 0;
     color: inherit;
     margin-bottom: 16px;
+    cursor: pointer;
 }
-
 .menu-mobile-active button > span {
     display: inline-flex;
     align-items: center;
 }
-
 .mobile-text {
     font-size: 22px;
     margin-left: 8px;
 }
-
-@media (width < 920px) {
+@media (max-width: 920px) {
     .sidebar {
         width: 72px;
-        padding: 40px 10px 30px 10px;
+        padding: 10px;
     }
     .sidebar button > span {
-        width: 50px;
-        border-radius: 50%;
+        min-width:  50px;
+        max-width:  50px;
+        min-height: 50px;        
+        max-height: 50px;        
+        border-radius: 5px;
     }
     .sidebar button > span > span {
         opacity: 0;
         visibility: hidden;
     }
+    .sidebar-header{
+        padding-bottom: 0;
+    }
     .logo-img{
-        margin-left: 5px;
+        margin-left: -5px;
+        width: 40px;
+        min-height: 40px;
     }
     .main {
         margin-left: 92px;
     }
+    .sidebar-header > p{
+        display: none;
+    }
+    .sidebar-header > span{
+        display: none;
+    }
 }
-
 @media ( max-width: 480px) {
     .sidebar{
         display: none;
