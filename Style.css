@@ -11,6 +11,7 @@ body {
 .border {
     border: 1px solid red;
 }
+/* Menu e sidebar*/
 .logo-img{
     width: 60px;
     min-height: 60px;
@@ -96,14 +97,6 @@ body {
     flex-direction: column;
     width: 100%;
 }
-.main {
-    position: relative;
-    margin-left: 260px;
-    margin-right: 20px;
-    overflow: hidden;
-    font-size: 16px;
-    text-align: justify;
-}
 .button-mobile{
     z-index: 99;
     background-color: #ffffff;
@@ -112,6 +105,7 @@ body {
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
     color: #000;
     border: 0;
     cursor: pointer;
@@ -156,6 +150,35 @@ body {
     font-size: 22px;
     margin-left: 8px;
 }
+/* Conteúdo do site */
+.main {
+    position: relative;
+    margin-left: 260px;
+    margin-right: 20px;
+    overflow: hidden;
+    font-size: 16px;
+    text-align: justify;
+}
+.content{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.articles {
+    display:flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 1;
+    width: 300px;
+}
+.articles:hover {
+    background-color: #f0f0f0;
+}
+/* Responsividade */
 @media (max-width: 920px) {
     .sidebar {
         width: 72px;
@@ -201,6 +224,7 @@ body {
         width: 100%;
         margin-left: 0px;
         margin-right: 0px;
+        margin-top: 50px;
         padding: 20px;
     }
 }
