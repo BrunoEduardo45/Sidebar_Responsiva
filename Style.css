@@ -1,5 +1,5 @@
 *{
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
 }
 .limite {
     border: 1px solid red;
@@ -46,6 +46,10 @@
     background-color: #fff;
     z-index: 1;
 }
+.sidebar a{
+    text-decoration: none;
+    color: inherit;
+}
 .sidebar hr{
     width: 100%;
     border: 2px solid #d8d8d8;
@@ -60,6 +64,7 @@
     cursor: pointer;
     text-align: left;
     padding: 0;
+    width: 100%;
 }
 .sidebar button > span {
     display:inline-flex;
@@ -152,31 +157,62 @@
     overflow: hidden;
     font-size: 16px;
     text-align: justify;
-    background-color: #e9e9e9;
 }
 .content{
     display:flex;
     justify-content:last baseline;
     flex-wrap: wrap;
 }
+.title-content{
+    /* background-color: #fff;
+    padding: 10px 25px;
+    border-radius: 10px; */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.title-content i{
+    scale: 1.5;
+}
+.title-content h1{
+    font-size: 30px;}
+
 .articles {
     padding: 10px;
 }
 .articles-content{
     display:flex;
     flex-direction: column;
-    background-color: #fff;
+    border: 1px solid #ccc;
     border-radius: 10px;
     cursor: pointer;
     flex: 1;
+    height: 100%;
     width: 100%;
     padding: 30px;
+    justify-content: space-between;
+}
+.articles-content img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+}
+.articles-content img:hover {
+    scale: 1.1;
 }
 .articles-content h3{
     text-align: left;
 }
 .articles-content:hover {
     background-color: #f9f9f9;
+}
+.articles-content > button{
+    bottom: 0;
+}
+.articles-content button > span{
+    margin-right: 5px;
 }
 /* Responsividade */
 @media (max-width: 1460px) {
