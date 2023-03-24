@@ -241,6 +241,26 @@
 .articles-content button > span{
     margin-right: 5px;
 }
+.div-size {
+    display: flex;
+    justify-content: space-between;
+}
+.size{
+    padding: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #eeeeee;
+    border-radius:50%; 
+    width:35px; 
+    height:35px;
+    border: none;
+}
+.size:hover {
+    background-color: #c6c6c6;
+}
 /* Carrinho de compras */
 #carrinho {
     position: fixed;

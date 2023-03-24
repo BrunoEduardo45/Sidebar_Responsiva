@@ -6,7 +6,9 @@ const items = [
         descricao: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         img: 'img/calca-masculina.webp',
         quantidade: 0,
-        valor: 50.99
+        valor: 50.99,
+        tamanho: '36',
+        cor: 'Preta'
     },
     {
         id: 1,
@@ -15,7 +17,9 @@ const items = [
         descricao: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         img: '/img/camisa-masculina.webp',
         quantidade: 0,
-        valor: 35.99
+        valor: 35.99,
+        tamanho: 'Padrão',
+        cor: 'Preta'
     },
     {
         id: 2,
@@ -24,7 +28,9 @@ const items = [
         descricao: 'Lorem Ips typesetting industry.',
         img: '/img/short-feminino.webp',
         quantidade: 0,
-        valor: 42.99
+        valor: 42.99,
+        tamanho: 'Padrão',
+        cor: 'Preta'
     },
     {
         id: 3,
@@ -33,7 +39,9 @@ const items = [
         descricao: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         img: '/img/calca-feminina.webp',
         quantidade: 0,
-        valor: 74.99
+        valor: 74.99,
+        tamanho: 'Padrão',
+        cor: 'Preta'
     },
     {
         id: 4,
@@ -42,7 +50,9 @@ const items = [
         descricao: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         img: '/img/camisa-feminina.jfif',
         quantidade: 0,
-        valor: 23.99
+        valor: 23.99,
+        tamanho: 'Padrão',
+        cor: 'Preta'
     },
     {
         id: 5,
@@ -51,7 +61,9 @@ const items = [
         descricao: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         img: '/img/mochila-crianca.jfif',
         quantidade: 0,
-        valor: 19.99
+        valor: 19.99,
+        tamanho: 'Padrão',
+        cor: 'Preta'
     },
 ]
 
@@ -66,10 +78,28 @@ inicializarLoja = () => {
                 <br/>
                 <h3>`+val.nome+`</h3>
                 <p>`+val.descricao+`</p>
+
+                <div class="div-size mb-3">
+                    <button class="size">PP</button>
+                    <button class="size">P</button>
+                    <button class="size">M</button>
+                    <button class="size">G</button>
+                    <button class="size">GG</button>
+                </div>
+
+                <select class="form-select mb-3" aria-label="Default select example">
+                    <option selected>Selecione</option>
+                    <option value="1">Preto</option>
+                    <option value="2">Azul</option>
+                    <option value="3">Vermelho</option>
+                    <option value="4">Rosa</option>
+                </select>
+
                 <p class="w-100 text-center p-2 rounded" 
                 style="font-size:18px; background-color: #eeeeee; font-weight: 600;"> 
                     R$ `+val.valor+`
                 </p>
+
                 <a key="`+val.id+`" class="btn btn-outline-success d-flex justify-content-center align-items-center">
                     <span>Adicionar ao carrinho</span> 
                     <i class="material-symbols-outlined" style="margin-left:5px;"> add_circle </i>
