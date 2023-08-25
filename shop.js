@@ -18,7 +18,7 @@ const items = [
         tipo: 1,
         nome: 'Camisa Masculina',
         descricao: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        img: '/img/camisa-masculina.webp',
+        img: 'img/camisa-masculina.webp',
         quantidade: 0,
         valor: 35.99,
         tamanho: 'Padrão',
@@ -29,7 +29,7 @@ const items = [
         tipo: 2,
         nome: 'Short Feminino',
         descricao: 'Lorem Ips typesetting industry.',
-        img: '/img/short-feminino.webp',
+        img: 'img/short-feminino.webp',
         quantidade: 0,
         valor: 42.99,
         tamanho: 'Padrão',
@@ -40,7 +40,7 @@ const items = [
         tipo: 2,
         nome: 'Calça Feminina',
         descricao: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        img: '/img/calca-feminina.webp',
+        img: 'img/calca-feminina.webp',
         quantidade: 0,
         valor: 74.99,
         tamanho: 'Padrão',
@@ -51,7 +51,7 @@ const items = [
         tipo: 2,
         nome: 'Camisa Feminina',
         descricao: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        img: '/img/camisa-feminina.jfif',
+        img: 'img/camisa-feminina.jfif',
         quantidade: 0,
         valor: 23.99,
         tamanho: 'Padrão',
@@ -62,7 +62,7 @@ const items = [
         tipo: 3,
         nome: 'Mochila de criança',
         descricao: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        img: '/img/mochila-crianca.jfif',
+        img: 'img/mochila-crianca.jfif',
         quantidade: 0,
         valor: 19.99,
         tamanho: 'Padrão',
@@ -147,7 +147,6 @@ inicializarLoja = (tipo) => {
                 document.getElementById("NXReportButton").classList.add("text-center");
                 document.getElementById("NXReportButton").classList.add("text-decoration-none");
                 document.getElementById("NXReportButton").classList.add("w-100");
-                document.getElementsByClassName("notiflix-report-message").classList.add("d-none");
                 return false;
             })
         }
