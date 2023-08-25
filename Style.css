@@ -2,6 +2,10 @@
     transition: all 0.2s ease;
 }
 
+btn{
+    cursor: pointer;
+}
+
 .limite {
     border: 1px solid red;
 }
@@ -358,5 +362,20 @@
         margin-right: 0px;
         margin-top: 72px;
         padding: 20px;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-cart{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #carrinho-content{
+        width: 100%;
+        margin-top: 70px;
     }
 }
